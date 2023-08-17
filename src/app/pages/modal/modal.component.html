@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>{{capitalizeFirstLetter(detailPokemon?.name)}}</h2>
+<div mat-dialog-content>
+  <mat-card>
+    <mat-card-content>
+      <div class="flex-container">
+        <div class="top-section">
+          <div class="habilidades">
+            <p>Type:</p>
+            <p>{{ capitalizeFirstLetter(detailPokemon?.types[0].type.name) }}</p>
+            <p>{{capitalizeFirstLetter(detailPokemon?.types[1]?.type.name) }}</p>
+            <p>{{ capitalizeFirstLetter(detailPokemon?.types[2]?.type.name) }}</p>
+
+          </div>
+          <img [src]="'https://projectpokemon.org/images/normal-sprite/' + data.name + '.gif'" class="d-block pokemon-image" alt="Pokemon Image">
+        </div>
+        <div class="right-section">
+          <div class="text-block">
+            <p>{{ capitalizeFirstLetter(detailPokemon?.stats[0].stat.name) }}</p>
+            <mat-progress-bar mode="determinate" [value]="detailPokemon?.stats[0].base_stat"></mat-progress-bar>
+          </div>
+          <div class="text-block">
+            <p>{{ capitalizeFirstLetter(detailPokemon?.stats[1].stat.name) }}</p>
+            <mat-progress-bar mode="determinate" [value]="detailPokemon?.stats[1].base_stat"></mat-progress-bar>
+          </div>
+          <div class="text-block">
+            <p>{{ capitalizeFirstLetter(detailPokemon?.stats[2].stat.name) }}</p>
+            <mat-progress-bar mode="determinate" [value]="detailPokemon?.stats[2].base_stat"></mat-progress-bar>
+          </div>
+          <div class="text-block">
+            <p>{{ capitalizeFirstLetter(detailPokemon?.stats[3].stat.name) }}</p>
+            <mat-progress-bar mode="determinate" [value]="detailPokemon?.stats[3].base_stat"></mat-progress-bar>
+          </div>
+          <div class="text-block">
+            <p>{{ capitalizeFirstLetter(detailPokemon?.stats[4].stat.name) }}</p>
+            <mat-progress-bar mode="determinate" [value]="detailPokemon?.stats[4].base_stat"></mat-progress-bar>
+          </div>
+          <div class="text-block">
+            <p>{{ capitalizeFirstLetter(detailPokemon?.stats[5].stat.name) }}</p>
+            <mat-progress-bar mode="determinate" [value]="detailPokemon?.stats[5].base_stat"></mat-progress-bar>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

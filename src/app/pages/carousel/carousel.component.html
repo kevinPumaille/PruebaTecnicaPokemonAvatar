@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Pokemones</h1>
+  <div class="pokemon-container" (scroll)="onScroll($event)">
+    <div class="pokemon-scroll">
+      <mat-card class="pokemon-card" *ngFor="let pokemon of listPokemones"  (click)="openDialog(pokemon.name)">
+        <img [src]="'https://projectpokemon.org/images/normal-sprite/' + pokemon.name + '.gif'" class="pokemon-image" alt="Pokemon Image">
+        <mat-card-content>
+          <h2 class="pokemon-name" >{{ capitalizeFirstLetter(pokemon.name) }}</h2>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

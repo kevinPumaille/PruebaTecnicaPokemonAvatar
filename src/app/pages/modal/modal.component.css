@@ -1,0 +1,14 @@
+.top-section{
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-block{
+  margin-top: 10px;
+}
+
+.pokemon-image{
+  /* background-color: red; */
+  width: 60%;
+}
